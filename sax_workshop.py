@@ -4,9 +4,5 @@ __version__ = "0.0.0"
 __author__ = "Floris Laporte"
 
 
-def print_hello():
-    print("hello")
-
-
-def print_hoi():
-    print("hoi")
+def print_info():
+    print("This file is actually not used.")
