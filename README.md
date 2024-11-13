@@ -23,6 +23,13 @@ uv sync
 
 That's it! `uv` makes it really simple don't you think?
 
+> Now go have a look in `sax_workshop.ipynb`. This is a jupyter notebook. Start the jupyter server as follows:
+> 
+> ```sh
+> jupyter lab
+> ```
+> 
+> Then open the notebook from within Jupyter Lab.
 
 ## Setting up a venv with UV
 
