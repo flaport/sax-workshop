@@ -1,0 +1,47 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = ["setuptools", "pip", "build", "wheel"]
+
+[project]
+name = "sax_workshop"
+version = "0.0.0"
+authors = [
+  {name = "Floris Laporte", email = "flaporte@gdsfactory.com"}
+]
+dependencies = [
+  "jax>=0.4.35",
+  "jaxlib>=0.4.35",
+  "jaxtyping",
+  "jupyterlab",
+  "jupyterlab-myst",
+  "jupyterlab-vim",
+  "klujax>=0.3.1",
+  "matplotlib",
+  "numpy>=2",
+  "pre-commit",
+  "ruff",
+  "sax>=0.14.0",
+  "scipy",
+]
+description = "Virtual workshop given for the University of Illinois - 2024.11.14"
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+py-modules = ["sax_workshop"]
+
+[tool.black]
+include = '\.pyi?$'
+line-length = 88
+target-version = ['py310']
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.setuptools.package-data]
+"*" = [
+  "LICENSE",
+  "README.md",
+  "MANIFEST.in"
+]
