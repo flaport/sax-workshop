@@ -919,6 +919,17 @@ wheels = [
 ]
 
 [[package]]
+name = "gmsh"
+version = "4.13.1"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5f/d7/1626031c2b1aca268cecb2a0c6b8a7a1c41c1e20268f09f049dd420cf715/gmsh-4.13.1-py2.py3-none-macosx_10_15_x86_64.whl", hash = "sha256:24ae76443d9df1fd10661c499cbfd0c877677b10b96d5bd72cd07e54aba1df55", size = 40365721 },
+    { url = "https://files.pythonhosted.org/packages/90/25/338e7fd977f13145ce6c889e39b5bfed17c5f5a5a5b1cfd3ef167bae4be7/gmsh-4.13.1-py2.py3-none-macosx_12_0_arm64.whl", hash = "sha256:179cfb7ce5d90c6695403cdd8a2cd23ec1a42b14f3485d814bc0eff9403c3204", size = 36525982 },
+    { url = "https://files.pythonhosted.org/packages/30/cb/44245b93105e93ca0223f4dfbfd199803b10770e79dee63f63cb755570e0/gmsh-4.13.1-py2.py3-none-manylinux_2_24_x86_64.whl", hash = "sha256:89ab53b6ec28f099b723da35bcdb6f5df779b10a9c0e6b09e8059906c3a48b27", size = 39771200 },
+    { url = "https://files.pythonhosted.org/packages/3c/3b/73656c5dbdda62a2e9e3829dbc06a5195600cb1fa66b92c032460ff9f98b/gmsh-4.13.1-py2.py3-none-win_amd64.whl", hash = "sha256:00f3c86b3146c1af1259e695ed646880c9da0c2ded2d1e48b240a1d3d194bae6", size = 42238951 },
+]
+
+[[package]]
 name = "gplugins"
 version = "1.1.2"
 source = { registry = "https://pypi.org/simple" }
@@ -2038,6 +2049,35 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba", size = 8729 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8", size = 9979 },
+]
+
+[[package]]
+name = "meshio"
+version = "5.3.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "rich" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/20/1e/caa4f15c020de3e3486b4133ca689236bd3863a3d6dd0f58e97ce86a296a/meshio-5.3.5.tar.gz", hash = "sha256:f21f01abd9f29ba06ea119304b3d39e610421cfe93b9dd23362834919f87586d", size = 490922 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/89/5f/39cbadc320cd78f4834b0a9f7a2fa3c980dca942bf193f315837eacb8870/meshio-5.3.5-py3-none-any.whl", hash = "sha256:0736c6e34ecc768f62f2cde5d8233a3529512a9399b25c68ea2ca0d5900cdc10", size = 166162 },
+]
+
+[[package]]
+name = "meshwell"
+version = "1.3.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "gmsh" },
+    { name = "meshio" },
+    { name = "pydantic" },
+    { name = "shapely" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/73/86/2cdc65a802bc02949e4293be31dfa243e3f8fdc01f8dda0eff6f55309089/meshwell-1.3.6.tar.gz", hash = "sha256:e78e5913531f97a1fc6ac66981faf27b9c07a9eb1bafd44aafdc5fdc64a69ac8", size = 33315 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7a/77/a868f5b3ee651de1bbe55830f40cfe983024d192c82cb947fe8a3fa47e76/meshwell-1.3.6-py3-none-any.whl", hash = "sha256:1e1922be5287e36c086dcd9d459b61609257308878dc0a20f7e5be8c1dc030fe", size = 35925 },
 ]
 
 [[package]]
@@ -3469,6 +3509,7 @@ dependencies = [
     { name = "jupyterlab-vim" },
     { name = "klujax" },
     { name = "matplotlib" },
+    { name = "meshwell" },
     { name = "numpy" },
     { name = "pre-commit" },
     { name = "ruff" },
@@ -3491,6 +3532,7 @@ requires-dist = [
     { name = "jupyterlab-vim" },
     { name = "klujax", specifier = ">=0.3.1" },
     { name = "matplotlib" },
+    { name = "meshwell", specifier = ">=1.3.6" },
     { name = "numpy", specifier = ">=2" },
     { name = "pre-commit" },
     { name = "ruff" },
