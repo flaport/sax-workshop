@@ -19,7 +19,10 @@ jobs:
           uv python install 3.11
           uv sync
       - name: Build docs
-        run: make docs
+        run: |
+          cp sax_workshop.ipynb ./docs
+          cd docs && ../.venv/bin/jb build .
+          touch docs/_build/html/.nojekyll
       - name: Store artifacts
         uses: actions/upload-artifact@master
         with:

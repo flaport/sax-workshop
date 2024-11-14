@@ -1,7 +1,7 @@
 .PHONY: docs
 docs:
 	cp sax_workshop.ipynb ./docs
-	cd docs && ../.venv/bin/jb build .
+	cd docs && jb build .
 
 clean:
 	rm -rf docs/sax-workshop.ipynb
