@@ -34,9 +34,6 @@ license = {file = "LICENSE"}
 readme = "README.md"
 requires-python = ">=3.10"
 
-[tool.setuptools]
-py-modules = ["sax_workshop"]
-
 [tool.black]
 include = '\.pyi?$'
 line-length = 88
