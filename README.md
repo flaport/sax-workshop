@@ -1,3 +1,7 @@
+<a target="_blank" href="https://colab.research.google.com/github/flaport/sax-workshop/blob/main/sax_workshop.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+
 # SAX Workshop
 
 > Virtual workshop given for the University of Illinois - 2024.11.14
@@ -24,11 +28,11 @@ uv sync
 That's it! `uv` makes it really simple don't you think?
 
 > Now go have a look in `sax_workshop.ipynb`. This is a jupyter notebook. Start the jupyter server as follows:
-> 
+>
 > ```sh
 > jupyter lab
 > ```
-> 
+>
 > Then open the notebook from within Jupyter Lab.
 
 ## Setting up a venv with UV
