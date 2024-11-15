@@ -20,6 +20,7 @@ jobs:
           uv sync
       - name: Build docs
         run: |
+          apt install mesa-libGLU
           cp sax_workshop.ipynb ./docs
           cd docs && ../.venv/bin/jb build . && touch _build/html/.nojekyll
       - name: Store artifacts
